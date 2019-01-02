@@ -19,6 +19,7 @@ void ATurretAIController::BeginPlay()
 	BB->SetValueAsBool(FName(TEXT("IsAnimationInProgress")), false);
 	BB->SetValueAsBool(FName(TEXT("IsHidden")), true);
 	BB->SetValueAsBool(FName(TEXT("IsActive")), false);
+	BB->SetValueAsBool(FName(TEXT("IsTargetLocked")), false);
 
 	if (!ensure(BehaviorTreeToUse)) return;
 	RunBehaviorTree(BehaviorTreeToUse);
